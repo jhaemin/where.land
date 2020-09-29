@@ -4,7 +4,7 @@ import $ from './home.module.scss'
 
 const websiteSectionData = [
   {
-    sectionTitle: '포털',
+    sectionTitle: '포털/검색',
     items: [
       {
         name: '덕덕고',
@@ -29,7 +29,45 @@ const websiteSectionData = [
     ],
   },
   {
+    sectionTitle: '배달음식',
+    items: [
+      {
+        name: '배달의민족',
+        link:
+          'https://apps.apple.com/kr/app/%EB%B0%B0%EB%8B%AC%EC%9D%98%EB%AF%BC%EC%A1%B1/id378084485',
+        imgSrc: '/assets/website-icons/baemin.png',
+      },
+    ],
+  },
+  {
+    sectionTitle: '숙박',
+    items: [
+      {
+        name: '야놀자',
+        link: 'https://www.yanolja.com/',
+        imgSrc: '/assets/website-icons/yanolja.png',
+      },
+    ],
+  },
+  {
     sectionTitle: '웹툰',
+    items: [
+      {
+        name: '네이버 웹툰',
+        link: 'https://comic.naver.com/webtoon/weekday.nhn',
+        imgSrc: '/assets/website-icons/naver-webtoon.png',
+      },
+      {
+        name: '다음 웹툰',
+        link: 'http://webtoon.daum.net/',
+        imgSrc: '/assets/website-icons/daum-webtoon.png',
+      },
+      {
+        name: '레진코믹스',
+        link: 'https://www.lezhin.com/ko',
+        imgSrc: '/assets/website-icons/lezhin-comics.jpg',
+      },
+    ],
   },
 ] as {
   sectionTitle: string
