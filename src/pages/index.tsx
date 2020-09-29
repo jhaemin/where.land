@@ -45,7 +45,7 @@ const WebsiteSection: React.FC<{
       <h1 className={$['subject']}>{props.sectionTitle}</h1>
       <div className={$['items-container']}>
         {props.items?.map((websiteData) => (
-          <WebsiteItem {...websiteData} />
+          <WebsiteItem key={websiteData.name} {...websiteData} />
         ))}
       </div>
     </section>
@@ -56,7 +56,7 @@ export default function Page() {
   return (
     <div className={$['home']}>
       {websiteSectionData.map((section) => (
-        <WebsiteSection {...section} />
+        <WebsiteSection key={section.sectionTitle} {...section} />
       ))}
     </div>
   )
