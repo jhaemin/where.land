@@ -1,4 +1,5 @@
 import { WebsiteInfo } from '@/types'
+import classNames from 'classnames'
 import $ from './style.module.scss'
 
 export type WebsiteItemProps = WebsiteInfo
@@ -16,6 +17,11 @@ const WebsiteItem: React.FC<WebsiteItemProps> = (props) => {
           <img className={$['icon']} src={props.imgSrc} alt={props.name} />
         </div>
         <h2 className={$['name']}>{props.name}</h2>
+        <div className={$['action-wrapper']}>
+          <i className={classNames('f7-icons', $['action'])}>
+            ellipsis_vertical
+          </i>
+        </div>
       </div>
     </a>
   )
