@@ -1,3 +1,4 @@
+import ActionsPopUp from '@/components/ActionsPopUp'
 import WebsiteItem from '@/components/WebsiteItem'
 import { WebsiteInfo } from '@/types'
 import $ from './home.module.scss'
@@ -96,6 +97,7 @@ export default function Page() {
       {websiteSectionData.map((section) => (
         <WebsiteSection key={section.sectionTitle} {...section} />
       ))}
+      <ActionsPopUp />
     </div>
   )
 }
