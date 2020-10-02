@@ -41,6 +41,14 @@ function ActionsPopUpComponent() {
     actionsPopUpStateAtom
   )
 
+  useEffect(() => {
+    if (isActive) {
+      disableBodyScroll(document.body)
+    } else {
+      clearAllBodyScrollLocks()
+    }
+  }, [isActive])
+
   const clientWidth = actionsPopUpRef.current?.clientWidth ?? 0
   const clientHeight = actionsPopUpRef.current?.clientHeight ?? 0
 
