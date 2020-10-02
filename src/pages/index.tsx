@@ -88,7 +88,7 @@ const WebsiteSection: React.FC<{
       <h1 className={$['subject']}>{props.sectionTitle}</h1>
       <div className={$['items-container']}>
         {props.items?.map((websiteData) => (
-          <WebsiteItem key={websiteData.name} {...websiteData} />
+          <WebsiteItem key={websiteData.websiteKey} {...websiteData} />
         ))}
       </div>
     </section>
