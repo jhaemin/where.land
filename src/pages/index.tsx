@@ -9,22 +9,22 @@ const websiteSectionData = [
     items: [
       {
         name: '덕덕고',
-        link: 'https://www.duckduckgo.com',
+        url: 'https://www.duckduckgo.com',
         imgSrc: '/assets/website-icons/duckduckgo.png',
       },
       {
         name: '구글',
-        link: 'https://www.google.com',
+        url: 'https://www.google.com',
         imgSrc: '/assets/website-icons/google.png',
       },
       {
         name: '네이버',
-        link: 'https://www.naver.com',
+        url: 'https://www.naver.com',
         imgSrc: '/assets/website-icons/naver.png',
       },
       {
         name: '다음',
-        link: 'https://www.daum.net',
+        url: 'https://www.daum.net',
         imgSrc: '/assets/website-icons/daum.png',
       },
     ],
@@ -34,7 +34,7 @@ const websiteSectionData = [
     items: [
       {
         name: '배달의민족',
-        link:
+        url:
           'https://apps.apple.com/kr/app/%EB%B0%B0%EB%8B%AC%EC%9D%98%EB%AF%BC%EC%A1%B1/id378084485',
         imgSrc: '/assets/website-icons/baemin.png',
       },
@@ -45,7 +45,7 @@ const websiteSectionData = [
     items: [
       {
         name: '야놀자',
-        link: 'https://www.yanolja.com/',
+        url: 'https://www.yanolja.com/',
         imgSrc: '/assets/website-icons/yanolja.png',
       },
     ],
@@ -55,17 +55,17 @@ const websiteSectionData = [
     items: [
       {
         name: '네이버 웹툰',
-        link: 'https://comic.naver.com/webtoon/weekday.nhn',
+        url: 'https://comic.naver.com/webtoon/weekday.nhn',
         imgSrc: '/assets/website-icons/naver-webtoon.png',
       },
       {
         name: '다음 웹툰',
-        link: 'http://webtoon.daum.net/',
+        url: 'http://webtoon.daum.net/',
         imgSrc: '/assets/website-icons/daum-webtoon.png',
       },
       {
         name: '레진코믹스',
-        link: 'https://www.lezhin.com/ko',
+        url: 'https://www.lezhin.com/ko',
         imgSrc: '/assets/website-icons/lezhin-comics.jpg',
       },
     ],

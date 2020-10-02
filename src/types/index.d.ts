@@ -1,5 +1,5 @@
 export type WebsiteInfo = {
   name: string
-  link: string
+  url: string
   imgSrc: string
 }
