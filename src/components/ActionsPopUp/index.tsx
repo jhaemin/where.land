@@ -91,10 +91,11 @@ function ActionsPopUpComponent() {
   )
 }
 
+function ActionsPopUp() {
+  return createPortal(
     <ActionsPopUpComponent />,
-        document.getElementById('actions-pop-up') as HTMLElement
-      )
-    : null
+    document.getElementById('actions-pop-up') as HTMLElement
+  )
 }
 
 export default ActionsPopUp

@@ -1,7 +1,11 @@
-import ActionsPopUp from '@/components/ActionsPopUp'
 import WebsiteItem from '@/components/WebsiteItem'
 import { WebsiteInfo } from '@/types'
+import dynamic from 'next/dynamic'
 import $ from './home.module.scss'
+
+const DynamicActionsPopUp = dynamic(() => import('@/components/ActionsPopUp'), {
+  ssr: false,
+})
 
 const websiteSectionData = [
   {
@@ -97,7 +101,7 @@ export default function Page() {
       {websiteSectionData.map((section) => (
         <WebsiteSection key={section.sectionTitle} {...section} />
       ))}
-      <ActionsPopUp />
+      <DynamicActionsPopUp />
     </div>
   )
 }
