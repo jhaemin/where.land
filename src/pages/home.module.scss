@@ -1,19 +1,23 @@
+@use '@/styles/mixins' as *;
+
 .home {
   padding: 0 1rem;
   display: grid;
   place-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
   margin: auto;
+  margin-top: 4rem;
 }
 
 .category-section {
   width: 100%;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   .subject {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    margin-left: 0.3rem;
+    font-weight: 600;
   }
 
   .items-container {
@@ -21,5 +25,35 @@
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 0.7rem;
     margin-top: 0.7rem;
+  }
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  text-align: center;
+
+  @include narrower-than(550px) {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 1;
+    background-image: linear-gradient(to right, #9158fc, #2384ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #2384ff; // Fallback text color
+    letter-spacing: -0.03em;
+  }
+
+  .description {
+    font-size: 0.5em;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    color: #888888;
   }
 }

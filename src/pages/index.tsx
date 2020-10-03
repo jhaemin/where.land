@@ -27,6 +27,25 @@ const WebsiteSection: React.FC<{
 export default function Page() {
   return (
     <div className={$['home']}>
+      <div className={$['header']}>
+        <h1 className={$['title']}>
+          <span
+            style={{
+              fontWeight: 600,
+            }}
+          >
+            eodiro
+          </span>
+          <span
+            style={{
+              fontSize: '0.8em',
+            }}
+          >
+            .to
+          </span>
+        </h1>
+        <h2 className={$['description']}>큐레이션된 서비스 컬렉션</h2>
+      </div>
       {websitesData.map((section) => (
         <WebsiteSection key={section.sectionTitle} {...section} />
       ))}
