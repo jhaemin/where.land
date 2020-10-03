@@ -2,7 +2,7 @@ import { WebsiteInfo } from '@/types'
 
 export const websitesData = [
   {
-    sectionTitle: '포털/검색',
+    sectionTitle: '포털·검색',
     items: [
       {
         websiteKey: 'duckduckgo',
@@ -51,10 +51,68 @@ export const websitesData = [
         url: 'https://www.bdtong.co.kr',
         imgSrc: '/assets/website-icons/bdtong.png',
       },
+      {
+        websiteKey: 'coupang_eats',
+        name: '쿠팡이츠',
+        url: '',
+        imgSrc: '',
+      },
     ],
   },
   {
-    sectionTitle: '숙박',
+    sectionTitle: '동영상',
+    items: [
+      {
+        websiteKey: 'youtube',
+        name: '유튜브',
+        url: 'https://www.youtube.com/',
+        imgSrc: '',
+      },
+      {
+        websiteKey: 'netflix',
+        name: '넷플릭스',
+        url: 'https://www.netflix.com',
+        imgSrc: '/assets/website-icons/netflix.png',
+      },
+      {
+        websiteKey: 'watcha',
+        name: '왓챠',
+        url: 'https://watcha.com/',
+        imgSrc: '/assets/website-icons/watcha.png',
+      },
+    ],
+  },
+  {
+    sectionTitle: '음악',
+    items: [
+      {
+        websiteKey: 'bugs',
+        name: '벅스',
+        url: '',
+        imgSrc: '',
+      },
+      {
+        websiteKey: 'melon',
+        name: '멜론',
+        url: '',
+        imgSrc: '',
+      },
+      {
+        websiteKey: 'genie',
+        name: '지니',
+        url: '',
+        imgSrc: '',
+      },
+      {
+        websiteKey: 'apple_music',
+        name: '애플뮤직',
+        url: 'https://www.apple.com/apple-music',
+        imgSrc: '',
+      },
+    ],
+  },
+  {
+    sectionTitle: '여행·숙박·항공',
     items: [
       {
         websiteKey: 'airbnb',

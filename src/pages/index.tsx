@@ -1,5 +1,5 @@
 import WebsiteItem from '@/components/WebsiteItem'
-import { websitesData } from '@/data/websites-data'
+import { websitesData } from '@/static-data/websites-data'
 import { WebsiteInfo } from '@/types'
 import dynamic from 'next/dynamic'
 import $ from './home.module.scss'
