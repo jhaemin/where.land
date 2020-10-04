@@ -1,5 +1,6 @@
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock'
 import cn from 'classnames'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { atom, useRecoilValue, useSetRecoilState } from 'recoil'
 import $ from './style.module.scss'
@@ -19,12 +20,27 @@ export const actionsPopUpStateAtom = atom({
   },
 })
 
-function ActionItem(props: { text: string; icon: string; isLast?: boolean }) {
+function ActionItem(props: {
+  text: string
+  icon: string
+  isLast?: boolean
+  onClick?: () => void
+}) {
   const { isLast = false } = props
+  const setActionsPopUpState = useSetRecoilState(actionsPopUpStateAtom)
 
   return (
     <>
-      <li className={$['action-item']}>
+      <li
+        className={$['action-item']}
+        onClick={() => {
+          setActionsPopUpState((previous) => ({
+            ...previous,
+            isActive: false,
+          }))
+          props.onClick && props.onClick()
+        }}
+      >
         <span className={$['text']}>{props.text}</span>
         <i className={cn('f7-icons', $['icon'])}>{props.icon}</i>
       </li>
@@ -63,6 +79,23 @@ function ActionsPopUpComponent() {
     top = window.innerHeight - clientHeight - 10
   }
 
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActionsPopUpState((previous) => ({
+          ...previous,
+          isActive: false,
+        }))
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [])
+
   return (
     <div
       className={cn($['actions-pop-up-container'], {
@@ -89,7 +122,9 @@ function ActionsPopUpComponent() {
         }}
       >
         <ol className={$['actions']}>
-          <ActionItem text="방문하기" icon="globe" />
+          <a href={websiteInfo.url} target="_blank" rel="noopener noreferrer">
+            <ActionItem text="이동" icon="globe" />
+          </a>
           <ActionItem text="링크 복사" icon="link" />
           <ActionItem text="리뷰" icon="quote_bubble" />
           <ActionItem text="공유" icon="square_arrow_up" isLast />
