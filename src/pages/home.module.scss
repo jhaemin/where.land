@@ -15,7 +15,7 @@
   margin-bottom: 2rem;
 
   .subject {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-left: 0.3rem;
     font-weight: 600;
   }
@@ -32,28 +32,26 @@
   width: 100%;
   margin-bottom: 4rem;
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
+  display: flex;
 
-  @include narrower-than(550px) {
-    font-size: 2.5rem;
-  }
+  // @include narrower-than(550px) {
+  //   font-size: 2rem;
+  // }
 
   .title {
     display: inline-block;
-    font-size: 1.25em;
+    font-size: 0.5em;
     font-weight: 300;
     line-height: 1;
-    background-image: linear-gradient(to right, #9158fc, #2384ff);
+    color: #000; // Fallback text color
+    background-image: linear-gradient(to right, #9c0d90, #058686);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #2384ff; // Fallback text color
-    letter-spacing: -0.03em;
   }
 
   .description {
     font-size: 0.5em;
     font-weight: 600;
-    margin-top: 0.2rem;
-    color: #888888;
   }
 }
