@@ -106,7 +106,7 @@ export const websitesData = [
       {
         websiteKey: 'apple_music',
         name: '애플뮤직',
-        url: 'https://www.apple.com/apple-music',
+        url: 'https://music.apple.com',
         imgSrc: '/assets/website-icons/apple-music.png',
       },
     ],
