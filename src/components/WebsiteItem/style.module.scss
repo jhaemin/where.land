@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     background-color: #fff;
+    box-shadow: 0 1rem 2.5rem rgba(#000, 0.12);
 
     .icon-wrapper {
       position: relative;
@@ -23,7 +24,9 @@
         object-fit: contain;
         border-radius: 0.4rem;
         background-color: #fff;
-        box-shadow: 0 0.1rem 0.3rem rgba(#000, 0.15);
+        // box-shadow: 0 0.1rem 0.3rem rgba(#000, 0.15);
+        // border: 1px solid #f0f0f0;
+        box-shadow: 0 0 0 1px #f0f0f0;
       }
     }
 
