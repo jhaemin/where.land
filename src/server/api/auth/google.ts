@@ -3,6 +3,7 @@ import { currentTime } from '@/utils/time'
 import { wlEnv } from '@/wlEnv'
 import { User } from '@prisma/client'
 import express from 'express'
+import jwt from 'jsonwebtoken'
 import passport from 'passport'
 import * as GoogleStrategy from 'passport-google-oauth'
 
@@ -62,6 +63,11 @@ googleAuthRouter.get('/auth/google/redirect', (req, res, next) => {
       session: false,
     },
     (err, user: User) => {
+      const accessToken = jwt.sign(user, wlEnv.auth.jwt.secret)
+      res.cookie('accessToken', accessToken, {
+        path: '/',
+        httpOnly: true,
+      })
       res.redirect('/')
     }
   )(req, res, next)
