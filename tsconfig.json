@@ -6,7 +6,8 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": false,
+    "outDir": "dist",
     "esModuleInterop": true,
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -15,9 +16,9 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "@@/*": ["./*"],
       "@/*": ["./src/*"]
-    }
+    },
+    "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
