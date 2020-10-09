@@ -1,29 +1,41 @@
 {
   "name": "where.land",
+  "description": "where.land",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_ENV=development tsnd --ignore-watch \"[\".next\"]\" -r tsconfig-paths/register src/server.ts",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "next": "9.5.4",
     "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "recoil": "0.0.13"
   },
   "devDependencies": {
     "@prisma/cli": "^2.8.1",
+    "@types/body-parser": "^1.19.0",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/classnames": "^2.2.10",
+    "@types/express": "^4.17.8",
     "@types/node": "^14.11.5",
+    "@types/passport": "^1.0.4",
+    "@types/passport-google-oauth": "^1.0.41",
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "chalk": "^4.1.0",
+    "cross-env": "^7.0.2",
     "sass": "^1.27.0",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.3"
   }
 }
