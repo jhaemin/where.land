@@ -3,14 +3,18 @@
   "description": "where.land",
   "version": "0.1.0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development tsnd --ignore-watch \"[\".next\"]\" -r tsconfig-paths/register src/server.ts",
-    "build": "next build",
-    "start": "next start"
+    "dev": "cross-env NODE_ENV=development tsnd -r tsconfig-paths/register --ignore-watch \"[\".next\"]\" --transpile-only --watch src/server/* src/server/index.ts",
+    "build": "next build && ttsc",
+    "start": "cross-env NODE_ENV=production node dist/server/index.js",
+    "introspect": "prisma introspect",
+    "generate": "prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "^2.8.1",
     "body-parser": "^1.19.0",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
+    "date-fns": "^2.16.1",
     "express": "^4.17.1",
     "next": "9.5.4",
     "passport": "^0.4.1",
@@ -36,6 +40,7 @@
     "sass": "^1.27.0",
     "ts-node-dev": "^1.0.0-pre.63",
     "tsconfig-paths": "^3.9.0",
+    "ttypescript": "^1.5.12",
     "typescript": "^4.0.3"
   }
 }
