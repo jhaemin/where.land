@@ -40,3 +40,6 @@ next-env.d.ts
 # database
 *.db
 *.db-journal
+
+# env
+**/wlEnv/index.ts
