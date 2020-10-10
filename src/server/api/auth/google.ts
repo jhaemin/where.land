@@ -1,11 +1,11 @@
+import { signAccessToken, signRefreshToken } from '@/modules/auth'
 import prisma from '@/modules/prisma'
 import { currentTime } from '@/utils/time'
 import { wlEnv } from '@/wlEnv'
-import { User } from '@prisma/client'
 import express from 'express'
-import jwt from 'jsonwebtoken'
 import passport from 'passport'
 import * as GoogleStrategy from 'passport-google-oauth'
+import { AuthData } from './types'
 
 passport.use(
   new GoogleStrategy.OAuth2Strategy(
@@ -30,7 +30,9 @@ passport.use(
       })
 
       if (existingUser) {
-        done(null, existingUser)
+        done(null, {
+          userID: existingUser.id,
+        })
         return
       }
 
@@ -41,7 +43,9 @@ passport.use(
         },
       })
 
-      done(null, createdUser)
+      done(null, {
+        userID: createdUser.id,
+      })
     }
   )
 )
@@ -62,9 +66,15 @@ googleAuthRouter.get('/auth/google/redirect', (req, res, next) => {
     {
       session: false,
     },
-    (err, user: User) => {
-      const accessToken = jwt.sign(user, wlEnv.auth.jwt.secret)
+    (err, authData: AuthData) => {
+      const accessToken = signAccessToken(authData)
+      const refreshToken = signRefreshToken(authData)
+
       res.cookie('accessToken', accessToken, {
+        path: '/',
+        httpOnly: true,
+      })
+      res.cookie('refreshToken', refreshToken, {
         path: '/',
         httpOnly: true,
       })
