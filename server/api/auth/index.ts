@@ -1,4 +1,4 @@
-import { wlEnv } from '@/wlEnv'
+import { wlEnv } from '@/../universal/wlEnv'
 // import { PrismaClient } from '@prisma/client'
 import express from 'express'
 import jwt from 'jsonwebtoken'

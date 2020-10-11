@@ -1,4 +1,4 @@
-import { wlEnv } from '@/wlEnv'
+import { wlEnv } from '@/../universal/wlEnv'
 import jwt from 'jsonwebtoken'
 import { AuthData } from '../server/api/auth/types'
 

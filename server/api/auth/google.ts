@@ -1,5 +1,5 @@
 import { signAccessToken } from '@/modules/auth'
-import { wlEnv } from '@/wlEnv'
+import { wlEnv } from '@/../universal/wlEnv'
 import express from 'express'
 import passport from 'passport'
 import * as GoogleStrategy from 'passport-google-oauth'

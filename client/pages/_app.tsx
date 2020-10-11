@@ -1,4 +1,4 @@
-import { verifyToken } from '@/modules/auth'
+import { verifyToken } from '@/../server/modules/auth'
 import { signAccessToken } from '@/server/api/auth'
 import { AuthData } from '@/server/api/auth/types'
 import '@/styles/globals.scss'

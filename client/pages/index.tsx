@@ -1,10 +1,10 @@
-import WebsiteItem from '@/components/WebsiteItem'
+import WebsiteItem from 'components/WebsiteItem'
 import { websitesData } from '@/static-data/websites-data'
 import { WebsiteInfo } from '@/types'
 import dynamic from 'next/dynamic'
 import $ from './home.module.scss'
 
-const DynamicActionsPopUp = dynamic(() => import('@/components/ActionsPopUp'), {
+const DynamicActionsPopUp = dynamic(() => import('components/ActionsPopUp'), {
   ssr: false,
 })
 
