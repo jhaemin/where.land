@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "~/*": ["../universal/*"]
     },
     "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
   },

@@ -1,0 +1,9 @@
+{
+  "name": "where.land-universal",
+  "version": "0.1.0",
+  "description": "where.land universal",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.16.1"
+  }
+}
