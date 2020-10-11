@@ -1,6 +1,4 @@
-import { signAccessToken, signRefreshToken } from '@/modules/auth'
-import prisma from '@/modules/prisma'
-import { currentTime } from '@/utils/time'
+import { signAccessToken } from '@/modules/auth'
 import { wlEnv } from '@/wlEnv'
 import express from 'express'
 import passport from 'passport'
@@ -23,11 +21,13 @@ passport.use(
         return
       }
 
-      const existingUser = await prisma.user.findOne({
-        where: {
-          userID: profile.emails[0].value,
-        },
-      })
+      // const existingUser = await prisma.user.findOne({
+      //   where: {
+      //     userID: profile.emails[0].value,
+      //   },
+      // })
+
+      const existingUser = { id: 1 }
 
       if (existingUser) {
         done(null, {
@@ -36,12 +36,14 @@ passport.use(
         return
       }
 
-      const createdUser = await prisma.user.create({
-        data: {
-          userID: profile.emails[0].value,
-          registeredAt: currentTime(),
-        },
-      })
+      // const createdUser = await prisma.user.create({
+      //   data: {
+      //     userID: profile.emails[0].value,
+      //     registeredAt: currentTime(),
+      //   },
+      // })
+
+      const createdUser = { id: 1 }
 
       done(null, {
         userID: createdUser.id,
@@ -66,18 +68,18 @@ googleAuthRouter.get('/auth/google/redirect', (req, res, next) => {
     {
       session: false,
     },
-    (err, authData: AuthData) => {
+    async (err, authData: AuthData) => {
       const accessToken = signAccessToken(authData)
-      const refreshToken = signRefreshToken(authData)
+      // const refreshToken = await signRefreshToken(authData)
 
       res.cookie('accessToken', accessToken, {
         path: '/',
         httpOnly: true,
       })
-      res.cookie('refreshToken', refreshToken, {
-        path: '/',
-        httpOnly: true,
-      })
+      // res.cookie('refreshToken', refreshToken, {
+      //   path: '/',
+      //   httpOnly: true,
+      // })
       res.redirect('/')
     }
   )(req, res, next)

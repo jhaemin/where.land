@@ -7,10 +7,20 @@ export const signAccessToken = (authData: AuthData) =>
     expiresIn: wlEnv.auth.jwt.accessTokenLifetime,
   })
 
-export const signRefreshToken = (authData: AuthData) =>
-  jwt.sign(authData, wlEnv.auth.jwt.secretKey, {
-    expiresIn: wlEnv.auth.jwt.refreshTokenLifetime,
-  })
+export const signRefreshToken = async (authData: AuthData) => {
+  const refreshToken = jwt.sign(authData, wlEnv.auth.jwt.secretKey)
+
+  // await prisma.user.update({
+  //   data: {
+  //     refreshToken,
+  //   },
+  //   where: {
+  //     id: authData.userID,
+  //   },
+  // })
+
+  return refreshToken
+}
 
 export const verifyToken = (token: string) =>
   jwt.verify(token, wlEnv.auth.jwt.secretKey) as AuthData
