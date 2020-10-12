@@ -1,9 +1,11 @@
-import { signAccessToken } from '@/modules/auth'
-import { wlEnv } from '@/../universal/wlEnv'
+import { signAccessToken, signRefreshToken } from '@/modules/auth'
+import { wlEnv } from '~/wlEnv'
 import express from 'express'
 import passport from 'passport'
 import * as GoogleStrategy from 'passport-google-oauth'
-import { AuthData } from './types'
+import { AuthData } from '~/types'
+import { currentTime } from '~/utils/time'
+import { prisma } from '@/modules/prisma'
 
 passport.use(
   new GoogleStrategy.OAuth2Strategy(
@@ -21,13 +23,11 @@ passport.use(
         return
       }
 
-      // const existingUser = await prisma.user.findOne({
-      //   where: {
-      //     userID: profile.emails[0].value,
-      //   },
-      // })
-
-      const existingUser = { id: 1 }
+      const existingUser = await prisma.user.findOne({
+        where: {
+          userID: profile.emails[0].value,
+        },
+      })
 
       if (existingUser) {
         done(null, {
@@ -36,14 +36,12 @@ passport.use(
         return
       }
 
-      // const createdUser = await prisma.user.create({
-      //   data: {
-      //     userID: profile.emails[0].value,
-      //     registeredAt: currentTime(),
-      //   },
-      // })
-
-      const createdUser = { id: 1 }
+      const createdUser = await prisma.user.create({
+        data: {
+          userID: profile.emails[0].value,
+          registeredAt: currentTime(),
+        },
+      })
 
       done(null, {
         userID: createdUser.id,
@@ -70,16 +68,16 @@ googleAuthRouter.get('/auth/google/redirect', (req, res, next) => {
     },
     async (err, authData: AuthData) => {
       const accessToken = signAccessToken(authData)
-      // const refreshToken = await signRefreshToken(authData)
+      const refreshToken = await signRefreshToken(authData)
 
       res.cookie('accessToken', accessToken, {
         path: '/',
         httpOnly: true,
       })
-      // res.cookie('refreshToken', refreshToken, {
-      //   path: '/',
-      //   httpOnly: true,
-      // })
+      res.cookie('refreshToken', refreshToken, {
+        path: '/',
+        httpOnly: true,
+      })
       res.redirect('/')
     }
   )(req, res, next)

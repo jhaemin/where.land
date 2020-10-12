@@ -1,6 +1,5 @@
-import { verifyToken } from '@/../server/modules/auth'
-import { signAccessToken } from '@/server/api/auth'
-import { AuthData } from '@/server/api/auth/types'
+import { verifyToken } from '@/../auth-server/modules/auth'
+import { AuthData } from '~/types'
 import '@/styles/globals.scss'
 import Cookies from 'cookies'
 import { IncomingMessage, ServerResponse } from 'http'

@@ -1,6 +1,7 @@
 import { wlEnv } from '@/../universal/wlEnv'
+import { AuthData } from '~/types'
 import jwt from 'jsonwebtoken'
-import { AuthData } from '../server/api/auth/types'
+import { prisma } from './prisma'
 
 export const signAccessToken = (authData: AuthData) =>
   jwt.sign(authData, wlEnv.auth.jwt.secretKey, {
@@ -10,14 +11,14 @@ export const signAccessToken = (authData: AuthData) =>
 export const signRefreshToken = async (authData: AuthData) => {
   const refreshToken = jwt.sign(authData, wlEnv.auth.jwt.secretKey)
 
-  // await prisma.user.update({
-  //   data: {
-  //     refreshToken,
-  //   },
-  //   where: {
-  //     id: authData.userID,
-  //   },
-  // })
+  await prisma.user.update({
+    data: {
+      refreshToken,
+    },
+    where: {
+      id: authData.userID,
+    },
+  })
 
   return refreshToken
 }
