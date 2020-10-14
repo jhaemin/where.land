@@ -7,7 +7,11 @@
     "dev": "cross-env NODE_ENV=development tsnd -r tsconfig-paths/register --transpile-only main.ts",
     "build": "ttsc",
     "introspect": "prisma introspect",
-    "generate": "prisma generate"
+    "generate": "prisma generate",
+    "migrate": "prisma migrate save --experimental && prisma migrate up --experimental"
+  },
+  "prisma": {
+    "schema": "../prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^2.8.1",
