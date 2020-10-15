@@ -1,4 +1,4 @@
-import { wlEnv } from '@/../universal/wlEnv'
+import { wlEnv } from '~/wlEnv'
 import { AuthData } from '~/types'
 import jwt from 'jsonwebtoken'
 import { prisma } from './prisma'
