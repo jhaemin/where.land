@@ -16,7 +16,7 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./*"],
-      "~/*": ["../universal/*"]
+      "~/*": ["../bridge/*"]
     },
     "plugins": [{ "transform": "@zerollup/ts-transform-paths" }]
   },
