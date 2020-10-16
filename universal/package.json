@@ -3,7 +3,19 @@
   "version": "0.1.0",
   "description": "where.land universal",
   "license": "MIT",
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate": "prisma migrate save --experimental && prisma migrate up --experimental"
+  },
+  "prisma": {
+    "schema": "../prisma/schema.prisma"
+  },
   "dependencies": {
-    "date-fns": "^2.16.1"
+    "@prisma/client": "^2.9.0",
+    "date-fns": "^2.16.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.0"
   }
 }
