@@ -4,3 +4,7 @@ export type WebsiteInfo = {
   url: string
   imgSrc: string
 }
+
+export type AuthData = {
+  userID: number
+}

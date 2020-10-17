@@ -1,6 +1,5 @@
-import { verifyToken } from '@/../auth-server/modules/auth'
-import { AuthData } from '~/types'
 import '@/styles/globals.scss'
+import { AuthData } from '@/types'
 import Cookies from 'cookies'
 import { IncomingMessage, ServerResponse } from 'http'
 import App, { AppContext, AppProps } from 'next/app'
@@ -56,7 +55,7 @@ WhereLandApp.getInitialProps = async (appContext: AppContext) => {
 
   if (accessToken) {
     try {
-      authData = verifyToken(accessToken)
+      // authData = verifyToken(accessToken)
     } catch (err) {
       if (err.name === 'TokenExpiredError') {
         // Expired access token
@@ -66,7 +65,7 @@ WhereLandApp.getInitialProps = async (appContext: AppContext) => {
 
         if (refreshToken) {
           try {
-            authData = verifyToken(refreshToken)
+            // authData = verifyToken(refreshToken)
 
             // const { data: user } = await Axios.get('/api/find-user', {
             //   data: {
@@ -82,14 +81,14 @@ WhereLandApp.getInitialProps = async (appContext: AppContext) => {
             //   throw Error('Wrong refresh token')
             // }
 
-            const newAccessToken = signAccessToken(authData)
+            // const newAccessToken = signAccessToken(authData)
             console.log('Signed new access token')
 
             // Set the new access token to the cookie
-            cookies.set('accessToken', newAccessToken, {
-              path: '/',
-              httpOnly: true,
-            })
+            // cookies.set('accessToken', newAccessToken, {
+            //   path: '/',
+            //   httpOnly: true,
+            // })
           } catch (err) {
             // Refresh token has been expired or malformed
             console.log('Refresh token has expired or malformed')
