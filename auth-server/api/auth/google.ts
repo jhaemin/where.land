@@ -1,18 +1,20 @@
-import { signAccessToken, signRefreshToken } from '@/modules/auth'
-import { wlEnv } from '~/wlEnv'
+import { prisma } from '@/modules/prisma'
 import express from 'express'
 import passport from 'passport'
 import * as GoogleStrategy from 'passport-google-oauth'
+import { signAccessToken, signRefreshToken } from '~/modules/auth'
 import { AuthData } from '~/types'
 import { currentTime } from '~/utils/time'
-import { prisma } from '@/modules/prisma'
+import { wlEnv } from '~/wlEnv'
+
+const redirectURL = '/google/redirect'
 
 passport.use(
   new GoogleStrategy.OAuth2Strategy(
     {
       clientID: wlEnv.auth.google.clientID,
       clientSecret: wlEnv.auth.google.clientSecret,
-      callbackURL: '/api/auth/google/redirect',
+      callbackURL: redirectURL,
     },
     async (...args) => {
       const profile = args[2]
@@ -53,14 +55,14 @@ passport.use(
 const googleAuthRouter = express.Router()
 
 googleAuthRouter.get(
-  '/auth/google/sign-up',
+  '/google/sign-up',
   passport.authenticate('google', {
     scope: ['profile', 'email'],
     session: false,
   })
 )
 
-googleAuthRouter.get('/auth/google/redirect', (req, res, next) => {
+googleAuthRouter.get(redirectURL, (req, res, next) => {
   passport.authenticate(
     'google',
     {
