@@ -14,7 +14,7 @@
     "schema": "../prisma/schema.prisma"
   },
   "dependencies": {
-    "@prisma/client": "^2.10.1",
+    "@prisma/client": "^2.11.0",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "cookies": "^0.8.0",
@@ -25,7 +25,7 @@
     "recoil": "0.1.2"
   },
   "devDependencies": {
-    "@prisma/cli": "^2.10.1",
+    "@prisma/cli": "^2.11.0",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/classnames": "^2.2.11",
     "@types/cookies": "^0.7.5",
