@@ -10,9 +10,6 @@
     "generate": "prisma generate",
     "introspect": "prisma introspect"
   },
-  "prisma": {
-    "schema": "../prisma/schema.prisma"
-  },
   "dependencies": {
     "@prisma/client": "^2.11.0",
     "body-scroll-lock": "^3.1.5",
