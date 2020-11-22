@@ -12,11 +12,12 @@
       0 0.4rem 0.4rem rgba(#071647, 0.05);
 
     .icon-wrapper {
-      position: relative;
       $icon-size: 1.8rem;
+
+      position: relative;
       min-width: $icon-size;
       height: $icon-size;
-      box-shadow: 0 0 0 1px #f0f0f0;
+      box-shadow: 0 0.08em 0.2em rgba(#000, 0.18);
       border-radius: 0.3rem;
       overflow: hidden;
     }
