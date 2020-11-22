@@ -8,11 +8,16 @@
   max-width: 50rem;
   margin: auto;
   margin-top: 4rem;
+  padding-bottom: 3rem;
 }
 
 .category-section {
   width: 100%;
   margin-bottom: 2rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   .subject {
     font-size: 1rem;
