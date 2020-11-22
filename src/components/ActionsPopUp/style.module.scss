@@ -22,9 +22,11 @@
   left: 0;
   opacity: 0;
   pointer-events: none;
+  z-index: 9999;
 }
 
 .actions-pop-up {
+  z-index: 10000;
   position: fixed;
   white-space: nowrap;
   opacity: 0;
