@@ -8,7 +8,12 @@
     "build": "next build",
     "start": "next start",
     "generate": "prisma generate",
-    "introspect": "prisma introspect"
+    "introspect": "prisma introspect",
+    "pm2:start": "pm2 start npm --name 'where.land' -- run start",
+    "pm2:restart": "if pm2 show where.land ; then pm2 restart where.land ; else echo 'No pm2 instance for where.land' ; fi",
+    "pm2:stop": "if pm2 show where.land ; then pm2 stop where.land ; else echo 'No pm2 instance for where.land' ; fi",
+    "pm2:delete": "if pm2 show where.land ; then pm2 delete where.land ; else echo 'No pm2 instance for where.land' ; fi",
+    "pm2:reboot": "npm ci && npm run build && npm run pm2:stop && npm run pm2:delete && npm run pm2:start"
   },
   "dependencies": {
     "@prisma/client": "^2.11.0",
