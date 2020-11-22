@@ -38,6 +38,7 @@ export default function Page() {
           </span>
           <span>.land</span>
         </h1>
+        <h2 className={$['description']}>엄선된 서비스 컬렉션</h2>
       </div>
       {websitesData.map((section) => (
         <WebsiteSection key={section.sectionTitle} {...section} />

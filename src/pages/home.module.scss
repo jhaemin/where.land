@@ -34,6 +34,8 @@
   font-size: 3rem;
   text-align: left;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
   // @include narrower-than(550px) {
   //   font-size: 2rem;
@@ -44,14 +46,16 @@
     font-size: 0.5em;
     font-weight: 300;
     line-height: 1;
-    // color: #000; // Fallback text color
-    // background-image: linear-gradient(to right, #9c0d90, #058686);
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
+    color: #000; // Fallback text color
+    background-image: linear-gradient(to right, #9c0d90, #058686);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .description {
-    font-size: 0.5em;
+    font-size: 0.31em;
     font-weight: 600;
+    margin-top: 0.5em;
+    color: #444;
   }
 }
