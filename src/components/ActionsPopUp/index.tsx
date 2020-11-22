@@ -125,9 +125,15 @@ function ActionsPopUpComponent() {
           <a href={websiteInfo.url} target="_blank" rel="noopener noreferrer">
             <ActionItem text="이동" icon="globe" />
           </a>
-          <ActionItem text="링크 복사" icon="link" />
-          <ActionItem text="리뷰" icon="quote_bubble" />
-          <ActionItem text="공유" icon="square_arrow_up" isLast />
+          <ActionItem
+            text="링크 복사"
+            icon="link"
+            onClick={() => {
+              navigator.clipboard.writeText(websiteInfo.url)
+            }}
+          />
+          {/* <ActionItem text="리뷰" icon="quote_bubble" /> */}
+          {/* <ActionItem text="공유" icon="square_arrow_up" isLast /> */}
         </ol>
       </div>
     </div>
