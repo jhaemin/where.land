@@ -3,10 +3,20 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { RecoilRoot } from 'recoil'
 
+const title = '웨어랜드'
+const description = '엄선된 서비스 컬렉션'
+
 function WhereLandApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>{title}</title>
+        <meta name="apple-mobile-web-app-title" content={title} />
+        <meta name="application-name" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://where.land/og-image.png" />
         <link rel="stylesheet" href="/fonts/framework7-icons.css" />
         <link rel="stylesheet" href="/fonts/payw-pro.css" />
         <link
