@@ -1,6 +1,5 @@
 import { WebsiteInfo } from '@/types'
 import classNames from 'classnames'
-import Image from 'next/image'
 import { useRef } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { actionsPopUpStateAtom } from '../ActionsPopUp'
@@ -42,14 +41,7 @@ const WebsiteItem: React.FC<WebsiteItemProps> = (props) => {
     >
       <div className={$['item']}>
         <div className={$['icon-wrapper']}>
-          {/* <img className={$['icon']} src={props.imgSrc} alt={props.name} /> */}
-          <Image
-            className={$['icon']}
-            src={props.imgSrc}
-            alt={props.name}
-            layout="fill"
-            objectFit="contain"
-          />
+          <img className={$['icon']} src={props.imgSrc} alt={props.name} />
         </div>
         <h2 className={$['name']}>{props.name}</h2>
         <div
