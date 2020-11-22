@@ -131,6 +131,7 @@ function ActionsPopUpComponent() {
             onClick={() => {
               navigator.clipboard.writeText(websiteInfo.url)
             }}
+            isLast
           />
           {/* <ActionItem text="리뷰" icon="quote_bubble" /> */}
           {/* <ActionItem text="공유" icon="square_arrow_up" isLast /> */}
