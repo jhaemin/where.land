@@ -1,7 +1,8 @@
-import { WebsiteInfo } from '@/types'
+import type { SectionInfo } from '@/types'
 
-export const websitesData = [
+export const sectionData: SectionInfo[] = [
   {
+    icon: 'search',
     sectionTitle: '포털·검색',
     items: [
       {
@@ -31,6 +32,7 @@ export const websitesData = [
     ],
   },
   {
+    icon: 'house_fill',
     sectionTitle: '배달음식',
     items: [
       {
@@ -60,6 +62,7 @@ export const websitesData = [
     ],
   },
   {
+    icon: 'play_rectangle_fill',
     sectionTitle: '동영상',
     items: [
       {
@@ -83,6 +86,7 @@ export const websitesData = [
     ],
   },
   {
+    icon: 'music_note_list',
     sectionTitle: '음악',
     items: [
       {
@@ -112,6 +116,7 @@ export const websitesData = [
     ],
   },
   {
+    icon: 'airplane',
     sectionTitle: '여행·숙박·항공',
     items: [
       {
@@ -135,6 +140,7 @@ export const websitesData = [
     ],
   },
   {
+    icon: 'bubble_left_bubble_right_fill',
     sectionTitle: '웹툰',
     items: [
       {
@@ -169,7 +175,4 @@ export const websitesData = [
       },
     ],
   },
-] as {
-  sectionTitle: string
-  items: WebsiteInfo[]
-}[]
+]
