@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3030",
     "generate": "prisma generate",
     "introspect": "prisma introspect",
     "pm2:start": "pm2 start npm --name 'where.land' -- run start",
