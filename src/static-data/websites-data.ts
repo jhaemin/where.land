@@ -173,6 +173,12 @@ export const sectionData: SectionInfo[] = [
         url: 'https://www.lezhin.com/ko',
         imgSrc: '/assets/website-icons/lezhin-comics.jpg',
       },
+      {
+        websiteKey: 'toomics',
+        name: '투믹스',
+        url: 'https://www.toomics.com',
+        imgSrc: '/assets/website-icons/toomics.png',
+      },
     ],
   },
 ]
