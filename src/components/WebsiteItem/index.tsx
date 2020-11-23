@@ -41,7 +41,11 @@ const WebsiteItem: React.FC<WebsiteItemProps> = (props) => {
     >
       <div className={$['item']}>
         <div className={$['icon-wrapper']}>
-          <img className={$['icon']} src={props.imgSrc} alt={props.name} />
+          <img
+            className={$['icon']}
+            src={`/assets/website-icons/${props.imgSrc}`}
+            alt={props.name}
+          />
         </div>
         <h2 className={$['name']}>{props.name}</h2>
         <div
