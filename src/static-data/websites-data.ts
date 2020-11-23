@@ -29,6 +29,18 @@ export const sectionData: SectionInfo[] = [
         url: 'https://www.daum.net',
         imgSrc: '/assets/website-icons/daum.png',
       },
+      {
+        websiteKey: 'bing',
+        name: '빙',
+        url: 'https://www.bing.com',
+        imgSrc: '/assets/website-icons/bing.png',
+      },
+      {
+        websiteKey: 'wolframalpha',
+        name: '울프람알파',
+        url: 'https://www.wolframalpha.com',
+        imgSrc: '/assets/website-icons/wolframalpha.png',
+      },
     ],
   },
   {
