@@ -120,6 +120,12 @@ export const sectionData: SectionInfo[] = [
         imgSrc: 'genie.png',
       },
       {
+        websiteKey: 'vibe',
+        name: '바이브',
+        url: 'https://vibe.naver.com',
+        imgSrc: 'vibe.png',
+      },
+      {
         websiteKey: 'apple_music',
         name: '애플뮤직',
         url: 'https://music.apple.com',
