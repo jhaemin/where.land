@@ -1,7 +1,11 @@
 import '@/styles/globals.scss'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { RecoilRoot } from 'recoil'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const title = '웨어랜드'
 const description = '엄선된 서비스 컬렉션'
