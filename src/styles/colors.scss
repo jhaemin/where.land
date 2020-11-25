@@ -1,0 +1,16 @@
+:root {
+  --whereland-gradient: linear-gradient(to right, #9c0d90, #058686);
+  --background-gradient: linear-gradient(to bottom, #fff, #efeff2);
+  --website-item-bg: #fff;
+  --default-text-color: #333;
+  --section-title-color: ;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --whereland-gradient: linear-gradient(to right, #e421d3, #12d6d6);
+    --background-gradient: linear-gradient(to bottom, #222, #000);
+    --website-item-bg: #333;
+    --default-text-color: #f0f0f0;
+  }
+}

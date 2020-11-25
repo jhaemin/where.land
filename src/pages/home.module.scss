@@ -59,7 +59,7 @@
     font-weight: 300;
     line-height: 1;
     color: #000; // Fallback text color
-    background-image: linear-gradient(to right, #9c0d90, #058686);
+    background-image: var(--whereland-gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
