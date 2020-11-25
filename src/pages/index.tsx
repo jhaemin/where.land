@@ -2,9 +2,7 @@ import WebsiteItem from '@/components/WebsiteItem'
 import { sectionData } from '@/static-data/websites-data'
 import type { SectionInfo } from '@/types'
 import classNames from 'classnames'
-import { gsap } from 'gsap'
 import dynamic from 'next/dynamic'
-import { useEffect } from 'react'
 import $ from './home.module.scss'
 
 const DynamicActionsPopUp = dynamic(() => import('@/components/ActionsPopUp'), {
@@ -30,25 +28,25 @@ const WebsiteSection: React.FC<SectionInfo> = (props) => {
 }
 
 export default function Page() {
-  useEffect(() => {
-    const sections = gsap.utils.toArray<HTMLElement>(
-      `.${$['category-section']}`
-    )
-    sections.forEach((section) => {
-      gsap.to(section, {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 0',
-          end: 'bottom 0%',
-          // markers: true,
-          scrub: true,
-        },
-        y: -section.clientHeight / 15,
-        opacity: 0,
-        scale: 0.9,
-      })
-    })
-  }, [])
+  // useEffect(() => {
+  //   const sections = gsap.utils.toArray<HTMLElement>(
+  //     `.${$['category-section']}`
+  //   )
+  //   sections.forEach((section) => {
+  //     gsap.to(section, {
+  //       scrollTrigger: {
+  //         trigger: section,
+  //         start: 'top 0',
+  //         end: 'bottom 0%',
+  //         // markers: true,
+  //         scrub: true,
+  //       },
+  //       y: -section.clientHeight / 15,
+  //       opacity: 0,
+  //       scale: 0.9,
+  //     })
+  //   })
+  // }, [])
 
   return (
     <div className={$['home']}>
