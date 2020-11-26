@@ -2,6 +2,24 @@ import type { SectionInfo } from '@/types'
 
 export const sectionData: SectionInfo[] = [
   {
+    icon: 'star_fill',
+    sectionTitle: 'made by PAYW',
+    items: [
+      {
+        websiteKey: 'saying',
+        name: '쎄잉',
+        url: 'https://saying.today',
+        imgSrc: 'saying.png',
+      },
+      {
+        websiteKey: 'whereland',
+        name: '웨어랜드',
+        url: 'https://where.land',
+        imgSrc: 'whereland.png',
+      },
+    ],
+  },
+  {
     icon: 'search',
     sectionTitle: '포털·검색',
     items: [
