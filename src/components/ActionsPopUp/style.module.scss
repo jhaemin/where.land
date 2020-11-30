@@ -33,7 +33,7 @@
   transform: scale(0.95);
   border-radius: 1rem;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--element-layer--2);
   box-shadow: 0 2rem 6rem rgba(#000, 0.3);
   pointer-events: none;
   transition: opacity 150ms ease, transform 150ms ease;

@@ -1,16 +1,19 @@
 :root {
   --whereland-gradient: linear-gradient(to right, #9c0d90, #058686);
   --background-gradient: linear-gradient(to bottom, #fff, #efeff2);
-  --website-item-bg: #fff;
   --default-text-color: #333;
-  --section-title-color: ;
+  --sub-text-color: #444;
+  --element-layer--1: #fff;
+  --element-layer--2: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --whereland-gradient: linear-gradient(to right, #e421d3, #12d6d6);
-    --background-gradient: linear-gradient(to bottom, #222, #000);
-    --website-item-bg: #333;
+    --whereland-gradient: linear-gradient(to right, #f3269d, #1ebce4);
+    --background-gradient: linear-gradient(to bottom, #1a1a1a, #000);
     --default-text-color: #f0f0f0;
+    --sub-text-color: #e0e0e0;
+    --element-layer--1: #222;
+    --element-layer--2: #333;
   }
 }

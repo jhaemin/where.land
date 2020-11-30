@@ -20,7 +20,7 @@
   .subject {
     padding: 0.7rem 1.3rem;
     margin: 0 -1rem;
-    color: #444;
+    color: var(--sub-text-color);
     text-shadow: 0 0.1em 0.3em rgba(#000, 0.3);
     font-size: 1rem;
     font-weight: 500;
@@ -68,6 +68,6 @@
     font-size: 0.31em;
     font-weight: 600;
     margin-top: 0.5em;
-    color: #444;
+    color: var(--sub-text-color);
   }
 }
