@@ -16,19 +16,19 @@
     "pm2:reboot": "npm ci && npm run build && npm run pm2:stop && npm run pm2:delete && npm run pm2:start"
   },
   "dependencies": {
-    "@prisma/client": "^2.11.0",
+    "@prisma/client": "^2.12.1",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.2.6",
     "cookies": "^0.8.0",
     "date-fns": "^2.16.1",
     "gsap": "^3.5.1",
-    "next": "10.0.2",
+    "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "recoil": "0.1.2"
   },
   "devDependencies": {
-    "@prisma/cli": "^2.11.0",
+    "@prisma/cli": "^2.12.1",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/classnames": "^2.2.11",
     "@types/cookies": "^0.7.5",
