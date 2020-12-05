@@ -49,7 +49,7 @@
     transition: background-color 200ms ease;
 
     &:hover {
-      background-color: #f0f0f3;
+      background-color: var(--element-layer--3-alt);
     }
 
     &:first-child {
@@ -74,6 +74,6 @@
   .separator {
     width: 100%;
     height: 1px;
-    background-color: #f0f0f3;
+    background-color: var(--element-layer--3);
   }
 }

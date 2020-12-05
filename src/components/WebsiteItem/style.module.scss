@@ -54,7 +54,7 @@
       transition: background-color 200ms ease;
 
       &:hover {
-        background-color: #f3f3f5;
+        background-color: var(--element-layer--3);
       }
 
       .action {

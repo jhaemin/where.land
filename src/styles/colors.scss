@@ -1,19 +1,25 @@
 :root {
   --whereland-gradient: linear-gradient(to right, #9c0d90, #058686);
   --background-gradient: linear-gradient(to bottom, #fff, #efeff2);
+  --background-static: #efeff2;
   --default-text-color: #333;
   --sub-text-color: #444;
   --element-layer--1: #fff;
   --element-layer--2: #fff;
+  --element-layer--3: #f0f0f3;
+  --element-layer--3-alt: #f0f0f3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --whereland-gradient: linear-gradient(to right, #f3269d, #1ebce4);
     --background-gradient: linear-gradient(to bottom, #1a1a1a, #000);
+    --background-static: #000;
     --default-text-color: #f0f0f0;
     --sub-text-color: #e0e0e0;
     --element-layer--1: #222;
     --element-layer--2: #333;
+    --element-layer--3: #000;
+    --element-layer--3-alt: #444;
   }
 }
