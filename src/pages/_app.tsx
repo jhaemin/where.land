@@ -8,7 +8,7 @@ import { RecoilRoot } from 'recoil'
 gsap.registerPlugin(ScrollTrigger)
 
 const title = '웨어랜드'
-const description = '엄선된 서비스 컬렉션'
+const description = '어디로 가야하오'
 
 function WhereLandApp({ Component, pageProps }: AppProps) {
   return (
