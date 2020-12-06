@@ -16,8 +16,10 @@
     "pm2:delete": "if pm2 show where.land ; then pm2 delete where.land ; else echo 'No pm2 instance for where.land' ; fi",
     "pm2:reboot": "npm ci && npm run build && npm run pm2:stop && npm run pm2:delete && npm run pm2:start"
   },
-  "release-it": {
-    "npm": false
+  "np": {
+    "yarn": false,
+    "publish": false,
+    "releaseDraft": true
   },
   "dependencies": {
     "@prisma/client": "^2.12.1",
