@@ -6,6 +6,12 @@ export const sectionData: SectionInfo[] = [
     sectionTitle: 'made by PAYW',
     items: [
       {
+        websiteKey: 'eodiro',
+        name: '어디로(중앙대)',
+        url: 'https://eodiro.com',
+        imgSrc: 'eodiro.png',
+      },
+      {
         websiteKey: 'saying',
         name: '쎄잉',
         url: 'https://saying.today',
