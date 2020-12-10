@@ -3,7 +3,7 @@ import { sectionData } from '@/static-data/websites-data'
 import type { SectionInfo } from '@/types'
 import classNames from 'classnames'
 import dynamic from 'next/dynamic'
-import $ from './home.module.scss'
+import $ from './index.module.scss'
 
 const DynamicActionsPopUp = dynamic(() => import('@/components/ActionsPopUp'), {
   ssr: false,
