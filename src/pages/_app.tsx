@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { RecoilRoot } from 'recoil'
+import $ from './_app.module.scss'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -50,9 +51,15 @@ function WhereLandApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <RecoilRoot>
-        <div className="background"></div>
+        <div className="background" />
         <Component {...pageProps} />
-        <div id="actions-pop-up"></div>
+        <div className={$['tabs-container-positioner']}>
+          <div className={$['tabs-container']}>
+            <button className={$['tab']}></button>
+            <button className={$['tab']}></button>
+          </div>
+        </div>
+        <div id="actions-pop-up" />
       </RecoilRoot>
     </>
   )

@@ -1,0 +1,26 @@
+.tabs-container-positioner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8888;
+}
+
+.tabs-container {
+  backdrop-filter: blur(20px) saturate(1.7);
+  background-color: rgba(#fff, 0.8);
+  width: 100%;
+  max-width: 50rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+.tab {
+  height: 50px;
+}
