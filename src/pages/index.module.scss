@@ -1,13 +1,6 @@
 @use '@/styles/mixins' as *;
 
 .home {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  max-width: 50rem;
-  margin: auto;
-  padding: 5rem 1rem;
-  padding: 5rem calc(env(safe-area-inset-left) + 1rem);
 }
 
 .category-section {
