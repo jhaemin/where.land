@@ -1,0 +1,53 @@
+.default-layout {
+  $top-gap: 1rem;
+  $bottom-gap: 4rem;
+  $side-gap: 1rem;
+
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+  padding: $top-gap $side-gap $bottom-gap;
+
+  @supports (padding: env(safe-area-inset-left)) {
+    padding: $top-gap calc(env(safe-area-inset-left) + #{$side-gap}) $bottom-gap;
+  }
+}
+
+.tabs-container-positioner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 8888;
+  margin-bottom: 3rem;
+}
+
+$tab-default-gap: 0.2rem;
+
+.tabs-container {
+  backdrop-filter: blur(20px) saturate(1.7);
+  background-color: var(--element-layer--3);
+  border-radius: 0.7rem;
+  padding: $tab-default-gap;
+  max-width: 50rem;
+  overflow: hidden;
+  box-shadow: inset 0 0 0.2rem rgba($color: #000000, $alpha: 0.1);
+}
+
+.tab {
+  color: #808080;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: color 100ms ease, background-color 100ms ease,
+    box-shadow 100ms ease;
+
+  &.active {
+    font-weight: 600;
+    color: var(--default-text-color);
+    background-color: var(--element-layer--2);
+    box-shadow: 0 0.05rem 0.3rem rgba($color: #000000, $alpha: 0.2);
+  }
+}
