@@ -28,41 +28,8 @@ const WebsiteSection: React.FC<SectionInfo> = (props) => {
 }
 
 export default function Page() {
-  // useEffect(() => {
-  //   const sections = gsap.utils.toArray<HTMLElement>(
-  //     `.${$['category-section']}`
-  //   )
-  //   sections.forEach((section) => {
-  //     gsap.to(section, {
-  //       scrollTrigger: {
-  //         trigger: section,
-  //         start: 'top 0',
-  //         end: 'bottom 0%',
-  //         // markers: true,
-  //         scrub: true,
-  //       },
-  //       y: -section.clientHeight / 15,
-  //       opacity: 0,
-  //       scale: 0.9,
-  //     })
-  //   })
-  // }, [])
-
   return (
     <div className={$['home']}>
-      <div className={$['header']}>
-        <h1 className={$['title']}>
-          <span
-            style={{
-              fontWeight: 500,
-            }}
-          >
-            where
-          </span>
-          <span>.land</span>
-        </h1>
-        <h2 className={$['description']}>어디로 가야하오</h2>
-      </div>
       {sectionData.map((section) => (
         <WebsiteSection key={section.sectionTitle} {...section} />
       ))}
