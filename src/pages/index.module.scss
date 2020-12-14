@@ -12,8 +12,8 @@
   }
 
   .subject {
-    padding: 0.7rem 1.3rem;
-    margin: 0 -1rem;
+    padding: 0 1.3rem;
+    margin: 0 -1rem 0.7rem;
     color: var(--sub-text-color);
     text-shadow: 0 0.1em 0.3em rgba(#000, 0.3);
     font-size: 1rem;
@@ -31,37 +31,5 @@
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     gap: 0.7rem;
     margin-top: 0.3rem;
-  }
-}
-
-.header {
-  width: 100%;
-  margin-bottom: 4rem;
-  font-size: 3.5rem;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  // @include narrower-than(550px) {
-  //   font-size: 2rem;
-  // }
-
-  .title {
-    display: inline-block;
-    font-size: 0.5em;
-    font-weight: 300;
-    line-height: 1;
-    color: #000; // Fallback text color
-    background-image: var(--whereland-gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .description {
-    font-size: 0.35em;
-    font-weight: 600;
-    margin-top: 0.5em;
-    color: var(--sub-text-color);
   }
 }

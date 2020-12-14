@@ -1,15 +1,18 @@
-.default-layout {
-  $top-gap: 1rem;
-  $bottom-gap: 4rem;
-  $side-gap: 1rem;
+$top-gap: 1rem;
+$bottom-gap: 4rem;
+$side-gap: 1rem;
 
-  width: 100%;
+.default-layout {
+  padding: $top-gap 0 $bottom-gap;
+}
+
+.page-content {
   max-width: 50rem;
   margin: auto;
-  padding: $top-gap $side-gap $bottom-gap;
+  padding: 0 $side-gap;
 
   @supports (padding: env(safe-area-inset-left)) {
-    padding: $top-gap calc(env(safe-area-inset-left) + #{$side-gap}) $bottom-gap;
+    padding: 0 calc(env(safe-area-inset-left) + #{$side-gap});
   }
 }
 

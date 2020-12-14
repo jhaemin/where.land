@@ -65,7 +65,7 @@ export default function DefaultLayout({ children }: DefaultLayoutProps) {
   return (
     <div className={$['default-layout']}>
       <TabsContainer />
-      {children}
+      <div className={$['page-content']}>{children}</div>
     </div>
   )
 }
