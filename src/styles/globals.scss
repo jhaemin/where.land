@@ -57,6 +57,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: default;
 }
 
 ol,
@@ -81,4 +82,5 @@ button {
   background: none;
   border: none;
   appearance: none;
+  cursor: default;
 }
